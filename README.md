@@ -43,3 +43,11 @@ rails s
 ```
 
 Happy hacking!
+
+## License
+
+See the [LICENSE](license/) files for details.
+
+## Author
+
+Michiel Sikkes, [@michiels](http://twitter.com/michiels), http://firmhouse.com
