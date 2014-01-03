@@ -12,7 +12,7 @@ brew upgrade ruby-build
 rbenv install 2.1.0
 ```
 
-Make sure your terminal PATH includes ./bin by adding this line to your `~/.bash_profile`
+Make sure your terminal PATH includes ./bin by adding this line to your `~/.bash_profile` to make binstubs work. Binstubs makes your commands fast.
 
 ```
 export PATH=bin:$PATH
