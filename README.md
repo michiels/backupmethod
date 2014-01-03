@@ -2,7 +2,7 @@
 
 BackupMethod is an application for pulling backups from distributed sources and storing them in a central place.
 
-## Setting up development
+## Developing
 
 Install Ruby 2.1.0 using rbenv:
 
