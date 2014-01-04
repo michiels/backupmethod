@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :backups
+  resources :backups do
+    member do
+      get :fetch
+    end
+  end
 
   root to: redirect('/backups')
 

@@ -1,1 +1,9 @@
-<h1><%= @backup.name %></h1>
+<h1>Backup: <%= @backup.name || @backup.host %></h1>
+
+<p>
+  Path: <%= @backup.path %>
+</p>
+
+<p>
+  Filename: <%= @backup.filename_pattern %>
+</p>

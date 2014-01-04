@@ -39,6 +39,9 @@ gem 'normalize-rails'
 
 gem 'strongbox'
 
+gem 'net-ssh', require: false
+gem 'net-sftp', require: false
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
