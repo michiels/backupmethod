@@ -23,10 +23,10 @@
 </div>
 
 <div>
-  <%= f.label :scheduled_hour %>
-  <%= f.text_field :scheduled_hour %>
-  <%= f.label :scheduled_minute %>
-  <%= f.text_field :scheduled_minute %>
+  Schedule at
+  <%= f.text_field :scheduled_hour, placeholder: '0-23' %>
+  :
+  <%= f.select :scheduled_minute, [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55] %>
 </div>
 
 <div>
@@ -40,7 +40,7 @@
 </div>
 
 <div>
-  <button>Create scheduled backup</button>
+  <button>Add this backup to the schedule</button>
 </div>
 
 <% end %>

@@ -20,3 +20,11 @@ section.empty_state_action {
 div.container {
   @include outer-container;
 }
+
+div.field_with_errors {
+  color: #c00;
+  display: inline;
+  input, select {
+    background-color: #fee;
+  }
+}

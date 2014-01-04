@@ -13,6 +13,8 @@ class BackupsController < ApplicationController
 
     if @backup.save
       redirect_to backup_url(@backup)
+    else
+      render :new
     end
   end
 
