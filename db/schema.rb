@@ -11,6 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20140104000510) do
+
+  create_table "backups", force: true do |t|
+    t.string   "name"
+    t.string   "host"
+    t.string   "path"
+    t.string   "filename_pattern"
+    t.string   "username"
+    t.binary   "password"
+    t.binary   "password_key"
+    t.binary   "password_iv"
+    t.integer  "scheduled_hour"
+    t.integer  "scheduled_minute"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

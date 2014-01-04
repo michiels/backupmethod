@@ -1,0 +1,22 @@
+// Place all the styles related to the backups controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'bourbon';
+@import 'neat-helpers';
+$max-width: em(600);
+@import 'neat';
+
+body {
+  font-family: HelveticaNeue, sans-serif;
+}
+
+section.empty_state_action {
+  text-align: center;
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+
+div.container {
+  @include outer-container;
+}

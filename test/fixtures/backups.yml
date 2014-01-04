@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  host: MyString
+  path: MyString
+  filename_pattern: MyString
+  username: MyString
+  password: 
+  password_key: 
+  password_iv: 
+  scheduled_hour: 1
+  scheduled_minute: 1
+
+two:
+  name: MyString
+  host: MyString
+  path: MyString
+  filename_pattern: MyString
+  username: MyString
+  password: 
+  password_key: 
+  password_iv: 
+  scheduled_hour: 1
+  scheduled_minute: 1

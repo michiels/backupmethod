@@ -1,0 +1,2 @@
+class BackupsController < ApplicationController
+end
