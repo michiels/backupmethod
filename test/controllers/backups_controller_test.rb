@@ -17,4 +17,12 @@ class BackupsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should get show" do
+    backup = backups(:default)
+
+    get :show, id: backup
+
+    assert_response :success
+  end
+
 end

@@ -3,7 +3,44 @@
 <%= form_for @backup do |f| %>
 
 <div>
+  <%= f.label :name %>
   <%= f.text_field :name %>
+</div>
+
+<div>
+  <%= f.label :host %>
+  <%= f.text_field :host %>
+</div>
+
+<div>
+  <%= f.label :path, "Directory on host" %>
+  <%= f.text_field :path %>
+</div>
+
+<div>
+  <%= f.label :filename_pattern %>
+  <%= f.text_field :filename_pattern %>
+</div>
+
+<div>
+  <%= f.label :scheduled_hour %>
+  <%= f.text_field :scheduled_hour %>
+  <%= f.label :scheduled_minute %>
+  <%= f.text_field :scheduled_minute %>
+</div>
+
+<div>
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+</div>
+
+<div>
+  <%= f.label :password %>
+  <%= f.text_field :password %>
+</div>
+
+<div>
+  <button>Create scheduled backup</button>
 </div>
 
 <% end %>

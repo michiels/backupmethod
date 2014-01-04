@@ -1,25 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  host: MyString
-  path: MyString
-  filename_pattern: MyString
-  username: MyString
-  password: 
-  password_key: 
-  password_iv: 
-  scheduled_hour: 1
-  scheduled_minute: 1
-
-two:
-  name: MyString
-  host: MyString
-  path: MyString
-  filename_pattern: MyString
-  username: MyString
-  password: 
-  password_key: 
-  password_iv: 
-  scheduled_hour: 1
-  scheduled_minute: 1
+default:
+  name: default
+  host: localhost
+  path: /test
+  filename_pattern: db_HH_MM.sql
+  username: pullbackup
+  scheduled_hour: 10
+  scheduled_minute: 5
