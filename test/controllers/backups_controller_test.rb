@@ -1,7 +1,11 @@
 require 'test_helper'
 
 class BackupsControllerTest < ActionController::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "should get index" do
+    Backup.destroy_all
+
+    get :index
+
+    assert_response :success
+  end
 end
