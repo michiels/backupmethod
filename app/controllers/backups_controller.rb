@@ -49,7 +49,8 @@ class BackupsController < ApplicationController
     @pattern = @backup.filename_pattern.gsub(/YYYY/, now.strftime('%Y'))
     @pattern.gsub!(/MM/, now.strftime('%m'))
     @pattern.gsub!(/DD/, now.strftime('%d'))
-    @pattern.gsub!(/HH/, now.strftime('%H'))
+    # @pattern.gsub!(/HH/, now.strftime('%H'))
+    @pattern.gsub!(/HH/, '[0-9][0-9]')
     @pattern.gsub!(/mm/, "%d[0-9]" % @backup.scheduled_minute.to_s.first)
     @pattern.gsub!(/(ss)/, '*')
 
@@ -58,10 +59,18 @@ class BackupsController < ApplicationController
 
       if @entries.any?
         entry = @entries.first.name
-        entry_path = File.join(@backup.path, '2014.01.04.02.07.27/variant_production.tar.gpg')
-        sftp.file.open(entry_path, 'r') do |f|
-          raise f.string
-        end
+        entry_path = File.join(@backup.path, entry)
+        io = sftp.download!(entry_path)
+
+        snapshot = @backup.snapshots.create(backup_file_path: entry_path)
+        snapshot.save
+
+        file = File.new(Rails.root.join('tmp', [snapshot.id, File.basename(entry_path)].join('_')), 'w+')
+        file.binmode
+        file.write(io)
+
+        snapshot.snapshot_file = file
+        snapshot.save
       end
     end
 

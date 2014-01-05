@@ -1,4 +1,12 @@
-<h1>Backup: <%= @backup.name || @backup.host %></h1>
+<h1>Backup</h1>
+
+<p>
+  Name: <%= @backup.name %>
+</p>
+
+<p>
+  Host: <%= @backup.host %>
+</p>
 
 <p>
   Path: <%= @backup.path %>
@@ -7,3 +15,5 @@
 <p>
   Filename: <%= @backup.filename_pattern %>
 </p>
+
+<p><%= link_to "Fetch backup now", fetch_backup_path(@backup) %></p>

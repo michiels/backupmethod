@@ -6,6 +6,8 @@ class Backup < ActiveRecord::Base
 
   validates :host, :path, :filename_pattern, :scheduled_hour, :scheduled_minute, :username, :password, presence: true
 
+  has_many :snapshots
+
   def fetch
     now = Time.now
   end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140104000510) do
+ActiveRecord::Schema.define(version: 20140104111928) do
 
   create_table "backups", force: true do |t|
     t.string   "name"
@@ -26,6 +26,14 @@ ActiveRecord::Schema.define(version: 20140104000510) do
     t.integer  "scheduled_minute"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "snapshots", force: true do |t|
+    t.string   "backup_file_path"
+    t.integer  "backup_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "snapshot_file"
   end
 
 end

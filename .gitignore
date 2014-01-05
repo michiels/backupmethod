@@ -15,4 +15,5 @@
 /log/*.log
 /tmp
 
-config/secrets.yml
+/config/secrets.yml
+/public/uploads

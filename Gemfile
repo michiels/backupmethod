@@ -41,6 +41,7 @@ gem 'strongbox'
 
 gem 'net-ssh', require: false
 gem 'net-sftp', require: false
+gem 'carrierwave'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
